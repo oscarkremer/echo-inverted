@@ -1,0 +1,4 @@
+.idea
+/src/echo-inverted.egg-info/*
+/build/*
+*.ipynb
