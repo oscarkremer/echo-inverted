@@ -6,9 +6,9 @@ import types
 import yaml
 from pyqtgraph.parametertree import Parameter
 
-from rp_interface import utils
+from echo_inverted import utils
 # from rp_interface.red_pitaya_module import RedPitayaModule
-from rp_interface.red_pitaya_parameter import RedPitayaParameter
+from echo_inverted.red_pitaya_parameter import RedPitayaParameter
 
 import logging
 log = logging.getLogger(__name__)

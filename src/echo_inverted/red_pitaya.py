@@ -1,13 +1,13 @@
 from typing import Union, Any, List
 
-from rp_interface import utils
+from echo_inverted import utils
 
 import paramiko
 import os
 import time
 import logging
 
-from rp_interface.red_pitaya_register import Register, MuxedRegister
+from echo_inverted.red_pitaya_register import Register, MuxedRegister
 
 log = logging.getLogger(__name__)
 

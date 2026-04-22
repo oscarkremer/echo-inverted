@@ -1,2 +1,2 @@
-include src/rp_interface/bitfiles/*.bit
-include src/rp_interface/config/*.yaml
+include src/echo_inverted/bitfiles/*.bit
+include src/echo_inverted/config/*.yaml

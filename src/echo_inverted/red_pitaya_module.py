@@ -10,9 +10,9 @@ import pyqtgraph as pg
 from pyqtgraph.Qt import QtWidgets
 from pyqtgraph.parametertree import ParameterTree, Parameter
 
-from rp_interface import utils, gui_utils
-from rp_interface.red_pitaya import RedPitaya
-from rp_interface.red_pitaya_bitfile import Bitfile
+from echo_inverted import utils, gui_utils
+from echo_inverted.red_pitaya import RedPitaya
+from echo_inverted.red_pitaya_bitfile import Bitfile
 
 log = logging.getLogger(__name__)
 
