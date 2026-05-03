@@ -36,8 +36,8 @@ class EchoController:
         if verbose:
             print(stdout.readlines()) 
 
-    def start_pulses(self, num_pulses, reset_counter):
-        self.reset_counter = reset_counter
+    def start_pulses(self, num_pulses):
+        self.reset_counter = 1
         self.num_pulses = num_pulses
         self.execute_command(verbose=False)
         self.reset_counter = 0
