@@ -47,7 +47,7 @@ class EchoController:
         self.enable = 0
         self.execute_command(verbose=verbose)
 
-    def turn_on_pulses(self, frequency=0.1, reference_freq=50, verbose=False):
+    def turn_on(self, frequency=0.1, reference_freq=50, verbose=False):
         self.enable = 1
         self.trigger_count = int(reference_freq/frequency)
         self.execute_command(verbose=verbose)
