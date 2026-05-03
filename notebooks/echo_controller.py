@@ -17,9 +17,11 @@ class EchoController:
         self.counter_stage3 = 0
         self.counter_control = 0
         self.counter_control_delay = 0
+        self.reset_counter = 0
+        self.num_pulses = 0
 
     def execute_command(self, command='/opt/echo_dinter/register', verbose= False):
-        stdin, stdout, stderr = self.client.exec_command(' {} {} {} {} {} {} {} {} {}'.format(
+        stdin, stdout, stderr = self.client.exec_command(' {} {} {} {} {} {} {} {} {} {} {}'.format(
             command, 
             self.enable,
             self.trigger_count, 
@@ -28,10 +30,19 @@ class EchoController:
             self.counter_stage2, 
             self.counter_stage3, 
             self.counter_control, 
-            self.counter_control_delay))
+            self.counter_control_delay,
+            self.reset_counter,
+            self.num_pulses))
         if verbose:
             print(stdout.readlines()) 
-        
+
+    def start_pulses(self, num_pulses, reset_counter):
+        self.reset_counter = reset_counter
+        self.num_pulses = num_pulses
+        self.execute_command(verbose=False)
+        self.reset_counter = 0
+        self.execute_command(verbose=False)
+
     def turn_off(self, verbose=False):
         self.enable = 0
         self.execute_command(verbose=verbose)
